@@ -1,0 +1,172 @@
+﻿<Window x:Class="MoneyChecker.LicenseWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MoneyChecker"
+        mc:Ignorable="d"
+        Title="LicenseWindow" Height="511.2" Width="690">
+    <Grid Margin="0,0,-0.4,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="56"></RowDefinition>
+            <RowDefinition Height="81.6"></RowDefinition>
+            <RowDefinition Height="241.6"></RowDefinition>
+            <RowDefinition Height="240.8"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <StackPanel Orientation="Horizontal" Grid.Row="0" Margin="0,0,-0.4,80.2" Grid.RowSpan="2">
+            <Image Source="images/logoLicense.png" Margin="0,5,0,9.4"/>
+            <TextBlock FontSize="15" Margin="15,20,0,10.2"  x:Name="TextBlock_Finance" Width="491" RenderTransformOrigin="0.144,0.204"><Run Text="Alex Finance Pro 30-ти дневная пробная версия"/></TextBlock>
+            <Button FontSize="20" Foreground="White" Content="X" Width="24" Background="Red" Margin="98,15,15,10.6" RenderTransformOrigin="1.327,0.573" Click="Button_Click"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="0,1.2,-0.4,35.2">
+
+            <TextBlock FontSize="15" Margin="10,0,0,0.4" Padding="10" x:Name="TextBlock_Thanks" Width="585" RenderTransformOrigin="0.144,0.204" FontWeight="Bold"><Run Text="Благодарим Вас за использования пробной версии программы Alex Finance!"/></TextBlock>
+
+            <Image Source="images/clock.png" Margin="40,0,0,10.4" RenderTransformOrigin="3.417,0.434" Width="45"/>
+
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="0,52.2,-0.4,-370.4" Grid.RowSpan="3">
+
+            <WrapPanel Orientation="Vertical" Margin="0,0,0,510.4" Width="675">
+                <TextBlock FontSize="15" Margin="10,0,0,0.4" Padding="10" x:Name="TextBlock_Descriptions" Width="585" RenderTransformOrigin="0.144,0.204" ><Run Text="Благодарим Вас за использования пробной версии программы Alex Finance!"/></TextBlock>
+                <TextBlock FontSize="15" Margin="10,0,0,0.4" Padding="10" x:Name="TextBlock_Descriptions1" Width="585" RenderTransformOrigin="0.144,0.204" ><Run Text="Это пробная версия с ограничение на 200 записей. Нажмите кнопку 'Купить',"/></TextBlock>
+                <TextBlock FontSize="15" Margin="10,0,0,0.4" Padding="10" x:Name="TextBlock_Descriptions2" Width="585" RenderTransformOrigin="0.144,0.204" ><Run Text="чтобы снять ограничение."/></TextBlock>
+                <TextBlock FontSize="15" Margin="10,0,0,0.4" Padding="10" x:Name="TextBlock_Descriptions3" Width="585" RenderTransformOrigin="0.144,0.204" ><Run Text="Купив программу Вы получаете: "/></TextBlock>
+                <TextBlock FontSize="15" Margin="10,0,0,0.4" Padding="10" x:Name="TextBlock_Descriptions4" Width="585" RenderTransformOrigin="0.144,0.204" ><Run Text="Пожизненную лицензию."/></TextBlock>
+                <TextBlock FontSize="15" Margin="10,0,0,0.4" Padding="10" x:Name="TextBlock_Descriptions5" Width="585" RenderTransformOrigin="0.144,0.204" ><Run Text="Год бесплатных обновлений программы."/></TextBlock>
+                <TextBlock FontSize="15" Margin="10,0,0,0.4" Padding="10" x:Name="TextBlock_Descriptions6" Width="585" RenderTransformOrigin="0.144,0.204" ><Run Text="Пожизненную лицензию."/></TextBlock>
+            </WrapPanel>
+
+
+
+        </StackPanel>
+
+        <!--<WrapPanel Orientation="Vertical">
+            <Image Source="images/cash-flow.png" Height="25"/>
+           
+        </WrapPanel>
+        <WrapPanel Orientation="Vertical">
+            <Image Source="images/cash-flow.png" Height="25"/>
+            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">Валюты</TextBlock>
+        </WrapPanel>-->
+        <!--<StackPanel Orientation="Horizontal" Margin="310,0,4.6,4.8" FlowDirection="LeftToRight" Grid.Column="0" Grid.Row="0" RenderTransformOrigin="0.754,0.938">
+            <Image Source="images/group.png" Height="20"/>
+
+        
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="10,0,4.6,4.8" FlowDirection="LeftToRight" Grid.Column="0" Grid.Row="0">
+            
+
+            <TextBox Width="150" >Пользователи</TextBox>
+        </StackPanel>-->
+        <!--<ToolBar Grid.Row="1" Grid.Column="0" Height="60" VerticalAlignment="Top">
+            <RadioButton x:Name="ButtonResearch"  FontFamily="Consolas" Click="ButtonResearch_Click">
+                <WrapPanel Orientation="Vertical">
+                    <Image Source="images/research.png" Height="25"/>
+                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">Обзор</TextBlock>
+                </WrapPanel>
+            </RadioButton>
+
+            <RadioButton x:Name="ButtonMoneyTransfer" FontFamily="Consolas" Click="ButtonMoneyTransfer_Click">
+                <WrapPanel Orientation="Vertical">
+                    <Image Source="images/money-transfer.png" Height="25" RenderTransformOrigin="0.811,0.5"/>
+                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">Транзакции</TextBlock>
+                </WrapPanel>
+            </RadioButton>
+            <RadioButton x:Name="ButtonCalendar" FontFamily="Consolas" Click="ButtonCalendar_Click">
+                <WrapPanel Orientation="Vertical">
+                    <Image  Source="images/calendar.png" Height="25"/>
+                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">Календарь</TextBlock>
+                </WrapPanel>
+            </RadioButton>
+            <RadioButton x:Name="ButtonSchedule" FontFamily="Consolas" Click="ButtonSchedule_Click">
+                <WrapPanel Orientation="Vertical">
+                    <Image Source="images/schedule.png" Height="25"/>
+                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">Планировщик</TextBlock>
+                </WrapPanel>
+            </RadioButton>
+            <RadioButton x:Name="ButtonEvent" FontFamily="Consolas" Click="ButtonEvent_Click">
+                <WrapPanel Orientation="Vertical">
+                    <Image Source="images/event.png" Height="25"/>
+                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">События</TextBlock>
+                </WrapPanel>
+            </RadioButton>
+            <RadioButton x:Name="ButtonBudget"   FontFamily="Consolas" Click="ButtonBudget_Click">
+                <WrapPanel Orientation="Vertical">
+                    <Image Source="images/budget.png" Height="25"/>
+                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">Бюджет</TextBlock>
+                </WrapPanel>
+            </RadioButton>
+            <RadioButton x:Name="ButtonDebt" FontFamily="Consolas" Click="ButtonDebt_Click">
+                <WrapPanel Orientation="Vertical">
+                    <Image Source="images/debt.png" Height="25"/>
+                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">Долги</TextBlock>
+                </WrapPanel>
+            </RadioButton>
+            <RadioButton x:Name="ButtonReport" FontFamily="Consolas" Click="ButtonReport_Click">
+                <WrapPanel Orientation="Vertical">
+                    <Image Source="images/analysis.png" Height="25"/>
+                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">Отчеты</TextBlock>
+                </WrapPanel>
+            </RadioButton>
+            <Separator></Separator>
+            <RadioButton x:Name="ButtonCurrencies" FontFamily="Consolas" Click="ButtonCurrencies_Click">
+                <WrapPanel Orientation="Vertical">
+                    <Image Source="images/cash-flow.png" Height="25"/>
+                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">Валюты</TextBlock>
+                </WrapPanel>
+            </RadioButton>
+            <RadioButton x:Name="ButtonInvoices" FontFamily="Consolas" Click="ButtonInvoices_Click">
+                <WrapPanel Orientation="Vertical">
+                    <Image Source="images/invoices.png" Height="25"/>
+                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">Счета</TextBlock>
+                </WrapPanel>
+            </RadioButton>
+            <RadioButton x:Name="ButtonCategories" FontFamily="Consolas" Click="ButtonCategories_Click">
+                <WrapPanel Orientation="Vertical">
+                    <Image Source="images/categories.png" Height="25"/>
+                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">Категории</TextBlock>
+                </WrapPanel>
+            </RadioButton>
+            <RadioButton x:Name="ButtonUsers" FontFamily="Consolas" Click="ButtonUsers_Click">
+                <WrapPanel Orientation="Vertical">
+                    <Image Source="images/group.png" Height="25"/>
+                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">Пользователи</TextBlock>
+                </WrapPanel>
+            </RadioButton>
+            <Separator></Separator>
+            <RadioButton x:Name="ButtonSettings" FontFamily="Consolas" Click="ButtonSettings_Click">
+                <WrapPanel Orientation="Vertical">
+                    <Image Source="images/settings.png" Height="25"/>
+                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">Настройки</TextBlock>
+                </WrapPanel>
+            </RadioButton>
+        </ToolBar>-->
+
+        <StackPanel Orientation="Horizontal" Margin="37,24.2,81.6,136.6" FlowDirection="RightToLeft" Grid.Column="0" Grid.Row="3">
+
+            <Button x:Name="Button_Buy" Width="150"  Margin="20" Click="Button_Buy_Click">Купите пожалуйста</Button>
+            <Button x:Name="Button_Key" Width="150"   Margin="20">Ввести ключ</Button>
+            <Button x:Name="Button_Continue" Width="150"  Margin="20,20,20,19.6" Click="Button_Continue_Click" >Продолжить</Button>
+
+        </StackPanel>
+    </Grid>
+</Window>
+<!--<Grid>
+        
+
+        <StackPanel Orientation="Horizontal" Height="100" Margin="5,300,5,5" FlowDirection="RightToLeft" Grid.Column="0" Grid.Row="0">
+            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" RenderTransformOrigin="1.14,1.25" Width="250" Height="20"><Run Text="Alex Finance Pro 30-дневная пробная версия"/></TextBlock>
+            <Button x:Name="Button_Buy" Width="150"  Margin="20">Купите пожалуйста</Button>
+            <Button x:Name="Button_Key" Width="150"   Margin="20">Ввести ключ</Button>
+            <Button x:Name="Button_Continue" Width="150"  Margin="20" Click="Button_Continue_Click" >Продолжить</Button>
+
+        </StackPanel>
+
+
+    </Grid>
+</Window>-->

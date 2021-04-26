@@ -1,0 +1,135 @@
+﻿<Window x:Name="MainWindow1" x:Class="MoneyChecker.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MoneyChecker"
+        mc:Ignorable="d"
+        Title="Денюжко ЭкономистЪ и УчетчикЪ" Height="600" Width="800" Loaded="MainWindow1_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"></RowDefinition>
+            <RowDefinition Height="60"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Menu Height="20" Grid.Row="0" Grid.Column="0" VerticalAlignment="Top">
+            <MenuItem Header="File">
+                <MenuItem Header="Новая БД" ></MenuItem>
+                <MenuItem Header="Открыть БД" ></MenuItem>
+                <MenuItem Header="Сохранить" ></MenuItem>
+                <MenuItem Header="Сохранить как" ></MenuItem>
+                <Separator />
+                <MenuItem Header="Безопасность" ></MenuItem>
+                <MenuItem Header="Exit" ></MenuItem>
+            </MenuItem>
+            <MenuItem Header="Правки" ></MenuItem>
+            <MenuItem Header="Вид" ></MenuItem>
+        </Menu>
+        <ToolBar Grid.Row="1" Grid.Column="0" Height="60" VerticalAlignment="Top">
+            <RadioButton x:Name="ButtonResearch"  FontFamily="Consolas" Click="ButtonResearch_Click">
+                <WrapPanel Orientation="Vertical">
+                    <Image Source="images/research.png" Height="25"/>
+                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">Обзор</TextBlock>
+                </WrapPanel>
+            </RadioButton>
+
+            <RadioButton x:Name="ButtonMoneyTransfer" FontFamily="Consolas" Click="ButtonMoneyTransfer_Click">
+                <WrapPanel Orientation="Vertical">
+                    <Image Source="images/money-transfer.png" Height="25" RenderTransformOrigin="0.811,0.5"/>
+                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">Транзакции</TextBlock>
+                </WrapPanel>
+            </RadioButton>
+            <RadioButton x:Name="ButtonCalendar" FontFamily="Consolas" Click="ButtonCalendar_Click">
+                <WrapPanel Orientation="Vertical">
+                    <Image  Source="images/calendar.png" Height="25"/>
+                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">Календарь</TextBlock>
+                </WrapPanel>
+            </RadioButton>
+            <RadioButton x:Name="ButtonSchedule" FontFamily="Consolas" Click="ButtonSchedule_Click">
+                <WrapPanel Orientation="Vertical">
+                    <Image Source="images/schedule.png" Height="25"/>
+                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">Планировщик</TextBlock>
+                </WrapPanel>
+            </RadioButton>
+            <RadioButton x:Name="ButtonEvent" FontFamily="Consolas" Click="ButtonEvent_Click">
+                <WrapPanel Orientation="Vertical">
+                    <Image Source="images/event.png" Height="25"/>
+                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">События</TextBlock>
+                </WrapPanel>
+            </RadioButton>
+            <RadioButton x:Name="ButtonBudget"   FontFamily="Consolas" Click="ButtonBudget_Click">
+                <WrapPanel Orientation="Vertical">
+                    <Image Source="images/budget.png" Height="25"/>
+                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">Бюджет</TextBlock>
+                </WrapPanel>
+            </RadioButton>
+            <RadioButton x:Name="ButtonDebt" FontFamily="Consolas" Click="ButtonDebt_Click">
+                <WrapPanel Orientation="Vertical">
+                    <Image Source="images/debt.png" Height="25"/>
+                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">Долги</TextBlock>
+                </WrapPanel>
+            </RadioButton>
+            <RadioButton x:Name="ButtonReport" FontFamily="Consolas" Click="ButtonReport_Click">
+                <WrapPanel Orientation="Vertical">
+                    <Image Source="images/analysis.png" Height="25"/>
+                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">Отчеты</TextBlock>
+                </WrapPanel>
+            </RadioButton>
+            <Separator></Separator>
+            <RadioButton x:Name="ButtonCurrencies" FontFamily="Consolas" Click="ButtonCurrencies_Click">
+                <WrapPanel Orientation="Vertical">
+                    <Image Source="images/cash-flow.png" Height="25"/>
+                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">Валюты</TextBlock>
+                </WrapPanel>
+            </RadioButton>
+            <RadioButton x:Name="ButtonInvoices" FontFamily="Consolas" Click="ButtonInvoices_Click">
+                <WrapPanel Orientation="Vertical">
+                    <Image Source="images/invoices.png" Height="25"/>
+                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">Счета</TextBlock>
+                </WrapPanel>
+            </RadioButton>
+            <RadioButton x:Name="ButtonCategories" FontFamily="Consolas" Click="ButtonCategories_Click">
+                <WrapPanel Orientation="Vertical">
+                    <Image Source="images/categories.png" Height="25"/>
+                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">Категории</TextBlock>
+                </WrapPanel>
+            </RadioButton>
+            <RadioButton x:Name="ButtonUsers" FontFamily="Consolas" Click="ButtonUsers_Click">
+                <WrapPanel Orientation="Vertical">
+                    <Image Source="images/group.png" Height="25"/>
+                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">Пользователи</TextBlock>
+                </WrapPanel>
+            </RadioButton>
+            <Separator></Separator>
+            <RadioButton x:Name="ButtonSettings" FontFamily="Consolas" Click="ButtonSettings_Click">
+                <WrapPanel Orientation="Vertical">
+                    <Image Source="images/settings.png" Height="25"/>
+                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">Настройки</TextBlock>
+                </WrapPanel>
+            </RadioButton>
+        </ToolBar>
+        <StackPanel Orientation="Horizontal" FlowDirection="LeftToRight" Grid.Column="0" Grid.Row="2">
+            <ComboBox x:Name="ComboBox_View" FontSize="16" Width="120" Margin="0,3,2,0" Padding="40,0,0,0"  IsEditable="True" IsReadOnly="True" Text="Вид"/>
+            <ComboBox x:Name="ComboBox_Invoices" FontSize="16" Width="120" Margin="0,3,2,0" Padding="35,0,0,0" IsEditable="True" IsReadOnly="True" Text="Счета"/>
+            <ComboBox x:Name="ComboBox_Grouping" FontSize="16" Width="120" Margin="0,3,0,0" Padding="5,0,0,0" IsEditable="True" IsReadOnly="True" Text="Группировка"/>
+
+            <ComboBox x:Name="ComboBox_Graph" FontSize="16" Width="120" Margin="0,3,2,0" Padding="27,0,0,0"  IsEditable="True" IsReadOnly="True" Text="График"/>
+            <ComboBox x:Name="ComboBox_Interval" FontSize="16" Width="120" Margin="0,3,2,0" Padding="15,0,0,0" IsEditable="True" IsReadOnly="True" Text="Интервал"/>
+           
+            
+            <Calendar x:Name="_calendar" AllowDrop="False"/>
+            
+            
+            <!--<DatePicker/>-->
+
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" FlowDirection="RightToLeft" Grid.Column="0" Grid.Row="2">
+            <ComboBox x:Name="ComboBox_Filtr" FontSize="16" Width="120" Margin="2,3,2,0" Padding="25,0,0,0" IsEditable="True" IsReadOnly="True" Text="Фильтры"/>
+        <ComboBox x:Name="ComboBox_Legend" FontSize="16" Width="120" Margin="0,3,0,0" Padding="25,0,0,0" IsEditable="True" IsReadOnly="True" Text="Легенда"/>
+        </StackPanel>
+    </Grid>
+</Window>
